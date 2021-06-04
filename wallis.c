@@ -1,3 +1,4 @@
+  
 #include <assert.h>
 #include <stdlib.h>
 #include <stdio.h>
@@ -26,14 +27,14 @@ int main(void) {
 
 float wallis_pi(int n)
 {
-int i;
-float pi=1,numerator,denominator;
-for(i=1;i<=n;i++)
- {
-  numerator=(4*(i*i));
-  denominator=(4*(i*i)-1);
-  pi*=numerator/denominator;
- }
- return 2*pi;
+  float pi=2;
+  float v1,v2;
+  for(int i=1;i<=n;i++)
+   {
+      v1 = 4*i*i;
+      v2 = v1-1;
+      pi *= v1/v2;
+   }
+   return pi;
 }
 
